@@ -30,10 +30,10 @@
   "homepage": "https://github.com/RafaelGSS/open-apm-ts-decorator#readme",
   "types": "dist/index.d.ts",
   "peerDependencies": {
-    "open-apm": "0.1.4"
+    "open-apm": "0.1.6"
   },
   "dependencies": {
-    "open-apm": "^0.1.4"
+    "open-apm": "^0.1.6"
   },
   "devDependencies": {
     "@types/jest": "^26.0.15",

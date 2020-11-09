@@ -1,4 +1,4 @@
-import { globalAgent } from 'open-apm';
+import tracer from 'open-apm';
 
 export type DecoratorArgs = {
   name?: string;
@@ -13,7 +13,7 @@ export function OpenAPMDecorator({ name, isAsync }: DecoratorArgs): any {
     const method = descriptor.value;
     const subsegmentName = name || methodName;
     // eslint-disable-next-line no-param-reassign
-    descriptor.value = globalAgent.wrap(method, subsegmentName, isAsync);
+    descriptor.value = tracer.wrap(method, subsegmentName, isAsync !== undefined);
 
     return descriptor;
   };
